@@ -10,16 +10,16 @@ class Users extends ActiveRecord
     {
         return 'users';
     }
-	
-	public function create()
-	{
-		return [
-			'id' => 'integer',
-			'name' => 'string',
-			'gender' => 'integer',
-			'dep_id' => 'integer',
-		];
-	}
+
+    public function create()
+    {
+        return [
+            'id' => 'integer',
+            'name' => 'string',
+            'gender' => 'integer',
+            'dep_id' => 'integer',
+        ];
+    }
 
     public function fields()
     {
