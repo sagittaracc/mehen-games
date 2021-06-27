@@ -1,0 +1,17 @@
+{
+    "name": "sagittaracc/mehen-games",
+    "authors": [
+        {
+            "name": "yriiarutiunian",
+            "email": "yriiarutiunian@gmail.com"
+        }
+    ],
+    "require": {
+        "sagittaracc/suql": "^7.0"
+    },
+    "autoload": {
+        "classmap": [
+            "app/"
+        ]
+    }
+}
