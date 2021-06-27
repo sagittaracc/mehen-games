@@ -12,19 +12,19 @@ Container::create(require __DIR__ . '/app/config/db.php');
 
 // Fetch data from the database
 $data = Users::all()
-			->select([
-				'dep_id',
-				Raw::expression("IF(gender=1, 'male', 'female') as gender"),
-			])
-			->group(['dep_id', 'gender'])
-			->count(['gender' => 'count'])
-			->fetchAll();
+            ->select([
+                'dep_id',
+                Raw::expression("IF(gender=1, 'male', 'female') as gender"),
+            ])
+            ->group(['dep_id', 'gender'])
+            ->count(['gender' => 'count'])
+            ->fetchAll();
 			
 foreach ($data as $row) {
-	echo sprintf(
-		"Dep #%d: %d %s(s)\n",
-		$row['dep_id'],
-		$row['count'],
-		$row['gender']
-	);
+    echo sprintf(
+        "Dep #%d: %d %s(s)\n",
+        $row['dep_id'],
+        $row['count'],
+        $row['gender']
+    );
 }
